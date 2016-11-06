@@ -1,0 +1,11 @@
+{
+  "name": "Checky",
+  "description": "make it check",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "*",
+    "ejs": "*",
+    "sqlite3": "*",
+    "request": "*"
+  }
+}

@@ -1,0 +1,41 @@
+<% include header %>
+
+<div class="section no-pad-bot" id="index-banner">
+  <div class="container">
+    <br><br>
+    <h1 class="header center orange-text">Knock knock</h1>
+    <div class="row center">
+      <h5 class="header col s12 light">Who's there?</h5>
+    </div>
+    <br><br>
+  </div>
+</div>
+
+
+<div class="container">
+	<table>
+		<thead>
+		  <tr>
+		      <th data-field="id">Username</th>
+		      <th data-field="name">Status</th>
+		  </tr>
+		</thead>
+
+		<tbody>
+		  <% for(var i=0;i<users.length;i++) { %>
+				<tr>
+				  <td><a href="users/<%= users[i].username %>"><%= users[i].username %></a></td>
+				  <td>
+		        <% if(users[i].connected) { %>
+		          Online
+		        <% }else{ %>
+		          Offline
+		        <% } %>
+		      </td>
+				</tr>
+		  <% } %>
+		</tbody>
+	</table>
+</div>
+
+<% include footer %>
